@@ -1,15 +1,15 @@
 import { navigationLinks } from "@/config/nav";
 import { socialLinks } from "@/config/social";
 import {
-  Menu,
   MessageCircle,
   Phone,
-  Search,
   User,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import MobileMenu from "./MobileMenu";
+import SearchPage from "./Search";
 
 
 
@@ -71,16 +71,12 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center space-x-4">
-            <div className="p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full">
-              <Search />
-            </div>
-            <div className="p-3 bg-orange-500 cursor-pointer text-white rounded-full">
-              <Menu />
-            </div>
+          <div className="flex items-center space-x-4">  
+              <SearchPage />
             <div className="p-3 bg-sky-400 cursor-pointer text-white rounded-full">
               <User />
             </div>
+            <MobileMenu/>
           </div>
         </div>
       </div>

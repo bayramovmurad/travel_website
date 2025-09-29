@@ -1,9 +1,9 @@
+import RecentProduct from "@/components/shared/recent/RecentProduct";
+
 export default function Home() {
   return (
   <div>
-    <h1>
-      Home
-    </h1>
+   <RecentProduct/>
   </div>
   );
 }
