@@ -112,6 +112,7 @@
 
 
 @layer base {
+
   * {
     @apply border-border;
   }
@@ -120,3 +121,10 @@
   }
 }
 
+.swiper-button-prev {
+  @apply text-orange-600 !important
+}
+
+.swiper-button-next {
+  @apply text-orange-600 !important
+}

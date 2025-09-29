@@ -39,7 +39,7 @@ const RecentProduct = () => {
         className="container mx-auto px-10 lg:px-36">
         <CarouselContent>
           {packages.map((pkg, index) => (
-            <CarouselItem key={index} className="lg:basis-1/2 xl:basis-1/4">
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis">
               <div className="p-3">
                 <Card className="shadow-lg">
                   <CardHeader className="relative">
