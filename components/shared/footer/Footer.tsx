@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto py-32 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-8">
+      <div className="container mx-auto relative py-32 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-8">
         <div className="lg:col-span-2">
           <h3 className="text-2xl font-bold">Travel</h3>
           <p className="mt-4 text-sm">
@@ -62,7 +62,12 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="text-xl font-bold mb-4">Useful Links</h4>
-          <div className="space-y-2 text-sm">
+          <div className=" relative w-16 h-1 bg-orange-500">
+            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-orange-500"></div>
+            <div className="absolute h-3 w-3 bg-orange-500 rounded-full top-1/2 -translate-y-1/2 animate-move-dot"></div>
+            <div className="absolute h-1.5 w-1.5 ml-0.5 bg-white rounded-full top-1/2 -translate-y-1/2 animate-move-dot"></div>
+          </div>
+          <div className="space-y-2 text-sm mt-8">
             {navigationLinks.map((link, index) => (
               <Link
                 key={index}
@@ -74,8 +79,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="lg:col-span-2">
-          <h3 className="text-2xl font-bold">Instagram</h3>
-          <div className="grid grid-cols-6  gap-2">
+          <h3 className="text-2xl font-bold mb-4">Instagram</h3>
+          <div className=" relative w-16 h-1 bg-orange-500">
+            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-orange-500"></div>
+            <div className="absolute h-3 w-3 bg-orange-500 rounded-full top-1/2 -translate-y-1/2 animate-move-dot"></div>
+            <div className="absolute h-1.5 w-1.5 ml-0.5 bg-white rounded-full top-1/2 -translate-y-1/2 animate-move-dot"></div>
+          </div>
+          <div className="grid grid-cols-6 mt-8">
             {instagramImages.map((src, index) => (
               <Image
                 key={index}
@@ -90,7 +100,12 @@ const Footer = () => {
         </div>
         <div className="lg:col-span-2">
           <h4 className="text-xl font-bold mb-4">Subscribe</h4>
-          <p className="text-sm mb-4">
+          <div className=" relative w-16 h-1 bg-orange-500">
+            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-orange-500"></div>
+            <div className="absolute h-3 w-3 bg-orange-500 rounded-full top-1/2 -translate-y-1/2 animate-move-dot"></div>
+            <div className="absolute h-1.5 w-1.5 ml-0.5 bg-white rounded-full top-1/2 -translate-y-1/2 animate-move-dot"></div>
+          </div>
+          <p className="text-sm mb-4 mt-8">
             Subscribe our newsletter for getting quick updates.
           </p>
           <div className="flex flex-col sm:flex-row">
