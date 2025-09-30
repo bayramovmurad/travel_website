@@ -1,3 +1,5 @@
+"use client"
+
 import { navigationLinks } from "@/config/nav";
 import { socialLinks } from "@/config/social";
 import {
@@ -10,11 +12,13 @@ import Link from "next/link";
 import React from "react";
 import MobileMenu from "./MobileMenu";
 import SearchPage from "./Search";
+import { usePathname } from "next/navigation";
 
 
 
 const Header = () => {
  
+  const pathName = usePathname();
 
   return (
     <header className="bg-black text-white">
@@ -66,17 +70,17 @@ const Header = () => {
               <Link
                 key={index}
                 href={link.href}
-                className="hover:text-orange-500">
+                className={`${pathName===link.href ? "text-orange-500" : "hover:text-orange-500"}`}>
                 {link.label}
               </Link>
             ))}
           </nav>
-          <div className="flex items-center space-x-4">  
-              <SearchPage />
+          <div className="flex items-center space-x-4">
+            <SearchPage />
             <div className="p-3 bg-sky-400 cursor-pointer text-white rounded-full">
               <User />
             </div>
-            <MobileMenu/>
+            <MobileMenu />
           </div>
         </div>
       </div>
