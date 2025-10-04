@@ -1,6 +1,10 @@
+import HotelList from "./_components/HotelList"
+
 const Hotels = () => {
   return (
-    <div>Hotels</div>
+    <div>
+      <HotelList/>
+    </div>
   )
 }
 export default Hotels

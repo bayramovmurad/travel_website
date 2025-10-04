@@ -11,11 +11,9 @@ export default function Home() {
 
       <SectionOne />
       <SectionTwo />
-      <div className="h-24"></div>
       <RecentProduct />
-      <div className="h-24"></div>
-      
-      <div className="min-h-96"></div>
+  
+  
     </div>
   );
 }

@@ -36,7 +36,7 @@ const RecentProduct = () => {
             delay: 2000,
           }),
         ]}
-        className="container mx-auto px-10 lg:px-36">
+        className="container mx-auto px-10 lg:px-36 mt-20">
         <CarouselContent>
           {packages.map((pkg, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis">
