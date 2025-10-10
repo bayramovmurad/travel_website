@@ -6,6 +6,7 @@ import {
   MessageCircle,
   Phone,
   User,
+  UserPlus,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,12 +14,13 @@ import React from "react";
 import MobileMenu from "./MobileMenu";
 import SearchPage from "./Search";
 import { usePathname } from "next/navigation";
-
+import { useSession } from "next-auth/react";
 
 
 const Header = () => {
  
   const pathName = usePathname();
+  const { data: session, status } = useSession();
 
   return (
     <header className="bg-black text-white">
@@ -70,16 +72,30 @@ const Header = () => {
               <Link
                 key={index}
                 href={link.href}
-                className={`${pathName===link.href ? "text-orange-500" : "hover:text-orange-500"}`}>
+                className={`${
+                  pathName === link.href
+                    ? "text-orange-500"
+                    : "hover:text-orange-500"
+                }`}>
                 {link.label}
               </Link>
             ))}
           </nav>
           <div className="flex items-center space-x-4">
             <SearchPage />
-            <Link href="/login" className="p-3 bg-sky-400 cursor-pointer text-white rounded-full">
-              <User />
-            </Link>
+            {session ? (
+              <Link
+                href="/profile"
+                className="p-3 bg-red-400 cursor-pointer text-white rounded-full">
+                <UserPlus />
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                className="p-3 bg-sky-400 cursor-pointer text-white rounded-full">
+                <User />
+              </Link>
+            )}
             <MobileMenu />
           </div>
         </div>
